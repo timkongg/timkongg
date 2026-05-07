@@ -1,19 +1,46 @@
-# 👋 Hi, I'm Tim Kong
+# Hi, I'm Tim Kong
 
-🔬 **R&D Engineer** with a background in robotics startups and the semiconductor industry, currently pursuing a **Master's in Computer Science (Machine Learning specialization)** at Georgia Tech.
+**R&D Engineer** with a background in robotics startups and the semiconductor industry, currently pursuing a **Master's in Computer Science (Machine Learning specialization)** at Georgia Tech.
 
 I specialize in:
 - Reinforcement Learning & Generative AI
 - Computer Vision, Activity Recognition, Multi-Agent Systems
 - Full-stack tools and simulation for ML evaluation
 
-🌐 **[timkongg.github.io](https://timkongg.github.io/)** – My full portfolio (with videos, experiments, and visual results)
+**[timkongg.github.io](https://timkongg.github.io/)** – My full portfolio
 
 ---
 
-## 🧠 Highlight Projects
+## Highlight Projects
 
-### 🎮 Multi-Agent RL in Overcooked-AI using CTDE MAPPO
+### Distributed Diffusion Inference Pipeline on Azure 
+
+A distributed, event-driven, microservices-style image generation platform built on Azure. Users submit a draft hand-drawn image through the web frontend. Afterwards, the ML pipeline will be scheduled and fanned out across a GPU-backed inference cluster to produce 4 output drawings. Each output drawing is generated with a predefined prompt.
+
+#### Architecture
+
+![Architecture](https://github.com/user-attachments/assets/cf48ba4f-80f8-459c-bfe8-2066aedf0505)
+
+- Web Services
+  - Nextjs FE and Fastify API Server to serve the web frontend UI for user interactions
+- Event Bus
+  - Azure event hubs as the interface between Web services and ML services
+- ML Services
+  - Spark streaming job scheduler to trigger inference upon job submission event
+  - Ray inference cluster orchestrating the GPU workers to perform the inference tasks
+- Storage
+  - PostgreSQL database to store user, job, and task records
+  - Azure blob storage to store the input and output images, and the pretrained models
+  - ML Flow to store the model parameters and inference script
+ 
+#### Example Input and Outputs
+
+|           Input           |             Output 1             |             Output 2             |             Output 3             |             Output 4             |
+| :-----------------------: | :------------------------------: | :------------------------------: | :------------------------------: | :------------------------------: |
+| ![Input](https://github.com/user-attachments/assets/e7b47968-cc08-4459-8dfe-25726967246b) | ![Output 0](https://github.com/user-attachments/assets/54bb3088-5d52-4ef1-9c6e-55eb0d86d6af) | ![Output 1](https://github.com/user-attachments/assets/8140b98c-1658-4cd6-816e-21b382812db8) | ![Output 2](https://github.com/user-attachments/assets/a73b06b1-e037-44b7-8c7f-c5e46dbbfb85) | ![Output 3](https://github.com/user-attachments/assets/bc3cec57-dabb-4e8b-be36-62d64286535b) |
+
+
+### Multi-Agent RL in Overcooked-AI using CTDE MAPPO
 
 ![counter_circuit_o_1order-ezgif com-speed](https://github.com/user-attachments/assets/5bf1530e-0903-460a-835d-0d39f6ee623d)
 
@@ -24,7 +51,7 @@ I specialize in:
 ---
 
 
-### 🚀 Lunar Lander Continuous Control with SAC
+### Lunar Lander Continuous Control with SAC
 
 ![lunarlander](https://github.com/user-attachments/assets/e59449db-3993-49bc-86c3-ca8f3cc85119)
 
@@ -34,7 +61,7 @@ I specialize in:
 
 ---
 
-### 🧱 MeshQuest: Benchmarking and Fine-Tuning Generative 3D Models
+### MeshQuest: Benchmarking and Fine-Tuning Generative 3D Models
 
 ![MeshQuest](https://timkongg.github.io/images/meshquest.png)
 
@@ -44,7 +71,7 @@ I specialize in:
 
 ---
 
-## 📫 Contact
+## Contact
 
 📧 [hkong43@gatech.edu](mailto:hkong43@gatech.edu)  
 🌐 [Portfolio](https://timkongg.github.io)  
